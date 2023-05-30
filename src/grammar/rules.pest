@@ -12,7 +12,8 @@ html = _{
 //
 // DOCTYPE
 //
-doctype = { WSP* ~ chevron_left_bang ~ ^"doctype" ~ WSP* ~ attr* ~ WSP* ~ chevron_right_normal}
+doctype = { WSP* ~ chevron_left_bang ~ ^"doctype" ~ WSP* ~ doctype_body ~ chevron_right_normal}
+doctype_body = { (!chevron_right_normal ~ ANY)* }
 
 //
 // NODES
